@@ -1,0 +1,11 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET      /orders                         controllers.Application.listOrders
+GET     /orders/$id<[0-9]+>              controllers.Application.findOrder(id : Integer)
+POST    /orders                          controllers.Application.saveOrder
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file)

@@ -3,9 +3,10 @@
 # ~~~~
 
 # Home page
-GET      /orders                         controllers.Application.listOrders
-GET     /orders/$id<[0-9]+>              controllers.Application.findOrder(id : Integer)
-POST    /orders                          controllers.Application.saveOrder
+GET     /orders                         controllers.Application.listOrders
+GET     /orders/$id<[0-9]+>             controllers.Application.findOrder(id : Integer)
+POST    /orders                         controllers.Application.saveOrder
+GET     /loaderio-3b184bcedbb109ef4d68387df9bc0f5c.txt     controllers.Application.findFile
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file)

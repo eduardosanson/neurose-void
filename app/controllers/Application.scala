@@ -1,9 +1,11 @@
 package controllers
 
+import java.io.File
+
+import models.Orders._
+import models._
 import play.api.libs.json._
 import play.api.mvc._
-import models._
-import models.Orders._
 
 object Application extends Controller {
 
@@ -35,4 +37,11 @@ object Application extends Controller {
       }
   }
 
+  def findFile() = Action{
+    val path = "public/views/loaderio-3b184bcedbb109ef4d68387df9bc0f5c.txt"
+
+   Ok.sendFile(new File(path))
+
+
+  }
 }
